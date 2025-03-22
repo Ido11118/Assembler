@@ -87,4 +87,4 @@ This project was written as part of a university-level systems programming cours
 ## 👤 Author
 
 Ido  
-GitHub: @Ido11118
+GitHub: [@Ido11118](https://github.com/Ido11118)
