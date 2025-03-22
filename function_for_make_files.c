@@ -1,6 +1,6 @@
 /*
 File name: function_for_make_files.c
-program: Part of maman 14 program.
+program: custom assembler in C.
 Include file: function to make files after second loop.
 */
 
