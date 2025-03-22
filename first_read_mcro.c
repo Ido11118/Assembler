@@ -1,6 +1,6 @@
 /*
 File name: first_read_mcro.c
-program: Part of maman 14 program.
+program: custom assembler in C.
 Include file: a pre-assembler stage, will return 1 if no errors in stage, else return 0. 
 */
 
