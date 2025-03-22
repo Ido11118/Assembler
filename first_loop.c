@@ -1,6 +1,6 @@
 /*
 File name: first_loop.c
-program: Part of maman 14 program.
+program: custom assembler in C.
 Include file: the rirst loop process
 */
 
