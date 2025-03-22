@@ -1,5 +1,5 @@
 /*
-File name: maman14_prog.c
+File name: main.c
 program: custom assembler in C.
 Include file: main of program. 
 */
