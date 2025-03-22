@@ -1,9 +1,9 @@
-maman_14: maman14_prog.o first_read_mcro.o first_loop.o function_for_loop1.o second_loop.o function_for_make_files.o
-	gcc -ansi -pedantic -g -Wall maman14_prog.o first_read_mcro.o first_loop.o function_for_loop1.o second_loop.o function_for_make_files.o -o maman_14
+assembler: main.o first_read_mcro.o first_loop.o function_for_loop1.o second_loop.o function_for_make_files.o
+	gcc -ansi -pedantic -g -Wall main.o first_read_mcro.o first_loop.o function_for_loop1.o second_loop.o function_for_make_files.o -o assembler
 
 
-maman14_prog.o: maman14_prog.c asembler.h
-	gcc -c -ansi -pedantic -g -Wall maman14_prog.c -o maman14_prog.o
+main.o: main.c asembler.h
+	gcc -c -ansi -pedantic -g -Wall main.c -o main.o
 
 first_read_mcro.o: first_read_mcro.c asembler.h
 	gcc -c -ansi -pedantic -g -Wall first_read_mcro.c -o first_read_mcro.o
@@ -19,6 +19,3 @@ second_loop.o: second_loop.c asembler.h
 
 function_for_make_files.o: function_for_make_files.c asembler.h
 	gcc -c -ansi -pedantic -g -Wall function_for_make_files.c -o function_for_make_files.o
-
-
-
