@@ -1,7 +1,7 @@
 /*
 File name: asembler.h
-program: Part of maman 14 program.
-Include file: header for maman 14 program, includ defines, structs and statement of functions. 
+program: custom assembler in C.
+Include file: header for assembler program, includ defines, structs and statement of functions. 
 */
 
 
