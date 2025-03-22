@@ -1,6 +1,6 @@
 /*
 File name: second_loop.c
-program: Part of maman 14 program.
+program: custom assembler in C.
 Include file: the second loop process.
 */
 
