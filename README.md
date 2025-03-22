@@ -1,24 +1,84 @@
 # Assembler in C
+This project is a full implementation of a two-pass assembler written in C, developed for a simplified assembly language as part of an academic systems programming assignment.
 
-This project implements an assembler in C for a simplified assembly language, as part of the Maman 14 assignment.
+The assembler reads `.as` source files and generates output files (`.ob`, `.ent`, `.ext`) using the classic two-pass approach:
+- **First pass** builds the symbol table and identifies instructions and directives
+- **Second pass** resolves symbols and generates final machine code
 
-## 🛠 Features
+---
 
-- First pass: builds symbol table and identifies labels, directives, and instructions
-- Second pass: resolves symbols and generates machine code
-- Supports directives such as `.data`, `.string`, `.extern`, `.entry`
-- Detects syntax errors and prints appropriate error messages
+## 📁 File Structure
 
-## 📁 Structure
+| File                        | Description                                 |
+|-----------------------------|---------------------------------------------|
+| `maman14_prog.c`            | Main program logic                          |
+| `asembler.h`                | Shared definitions, structs, constants      |
+| `first_read_mcro.c`         | Reads and expands macros before assembly    |
+| `first_loop.c`              | Implements the first pass                   |
+| `function_for_loop1.c`      | Helper functions for parsing and validation |
+| `second_loop.c`             | Implements the second pass and code generation |
+| `function_for_make_files.c` | Generates `.ob`, `.ent`, `.ext` output files|
+| `makefile`                  | Compiles the project using GCC              |
 
-- `main.c` – Entry point of the program
-- `first_pass.c` – Logic for the first pass over the code
-- `second_pass.c` – Handles label resolution and code generation
-- `symbol_table.c` – Manages the symbol table
-- `parser.c` – Parses assembly lines and instructions
+---
 
-## 🚀 Usage
+## 🔧 Features
 
-1. Compile the project:
-   ```bash
-   gcc -Wall -g -o assembler *.c
+- ✅ Full macro support (with macro expansion before the first pass)
+- ✅ Support for `.data`, `.string`, `.extern`, `.entry`
+- ✅ Full symbol table implementation
+- ✅ Validates syntax, symbol usage, operand addressing
+- ✅ Supports 16 predefined commands
+- ✅ Generates object, entry, and extern files
+- ✅ Modular, readable C code
+
+---
+
+## 🚀 How to Compile and Run
+
+1. **Compile with make:**
+```bash
+make
+```
+
+2. **Run the assembler on a source file:**
+```bash
+./maman_14 program.as
+```
+
+3. **Output files created:**
+- `program.ob` – machine code (object file)
+- `program.ent` – list of entry symbols
+- `program.ext` – list of external symbol references
+
+---
+
+## 🧺as Example Input
+
+```asm
+MAIN:   mov  #5, r1
+        add  r1, r2
+        .entry MAIN
+```
+
+## 📄 Output
+
+- `example.ob` – assembled machine code
+- `example.ent` – includes label MAIN with its address
+
+---
+
+## 🧠 Educational Purpose
+
+This project was written as part of a university-level systems programming course. It demonstrates core concepts such as:
+- Low-level parsing and lexical analysis
+- Memory management and pointer usage in C
+- Assembly language translation
+- Multi-file modular program structure
+
+---
+
+## 👤 Author
+
+Ido  
+GitHub: [@Ido11118](https://github.com/Ido11118)
