@@ -1,6 +1,6 @@
 /*
 File name: function_for_loop1.c
-program: Part of maman 14 program.
+program: custom assembler in C.
 Include file: a smallest function for rirst loop 
 */
 
