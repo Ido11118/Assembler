@@ -1,7 +1,8 @@
 # Assembler in C
+
 This project is a full implementation of a two-pass assembler written in C, developed for a simplified assembly language as part of an academic systems programming assignment.
 
-The assembler reads `.as` source files and generates output files (`.ob`, `.ent`, `.ext`) using the classic two-pass approach:
+The assembler reads `.as` source files and generates output files (`.obj`, `.ent`, `.ext`) using the classic two-pass approach:
 - **First pass** builds the symbol table and identifies instructions and directives
 - **Second pass** resolves symbols and generates final machine code
 
@@ -11,14 +12,14 @@ The assembler reads `.as` source files and generates output files (`.ob`, `.ent`
 
 | File                        | Description                                 |
 |-----------------------------|---------------------------------------------|
-| `maman14_prog.c`            | Main program logic                          |
-| `asembler.h`                | Shared definitions, structs, constants      |
-| `first_read_mcro.c`         | Reads and expands macros before assembly    |
-| `first_loop.c`              | Implements the first pass                   |
-| `function_for_loop1.c`      | Helper functions for parsing and validation |
-| `second_loop.c`             | Implements the second pass and code generation |
-| `function_for_make_files.c` | Generates `.ob`, `.ent`, `.ext` output files|
-| `makefile`                  | Compiles the project using GCC              |
+| `main.c`                   | Entry point of the assembler program        |
+| `asembler.h`               | Shared definitions, structs, constants      |
+| `first_read_mcro.c`        | Reads and expands macros before assembly    |
+| `first_loop.c`             | Implements the first pass                   |
+| `function_for_loop1.c`     | Helper functions for parsing and validation |
+| `second_loop.c`            | Implements the second pass and code generation |
+| `function_for_make_files.c`| Generates `.obj`, `.ent`, `.ext` output files|
+| `makefile`                 | Compiles the project using GCC              |
 
 ---
 
@@ -43,13 +44,18 @@ make
 
 2. **Run the assembler on a source file:**
 ```bash
-./maman_14 program.as
+./assembler program.as
 ```
 
 3. **Output files created:**
-- `program.ob` – machine code (object file)
+- `program.obj` – machine code (object file)
 - `program.ent` – list of entry symbols
 - `program.ext` – list of external symbol references
+
+4. **Clean build files (optional):**
+```bash
+make clean
+```
 
 ---
 
@@ -63,7 +69,7 @@ MAIN:   mov  #5, r1
 
 ## 📄 Output
 
-- `example.ob` – assembled machine code
+- `example.obj` – assembled machine code
 - `example.ent` – includes label MAIN with its address
 
 ---
@@ -81,4 +87,4 @@ This project was written as part of a university-level systems programming cours
 ## 👤 Author
 
 Ido  
-GitHub: [@Ido11118](https://github.com/Ido11118)
+GitHub: @Ido11118
